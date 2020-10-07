@@ -1,6 +1,14 @@
 
-# Created by https://www.toptal.com/developers/gitignore/api/macos,swift
-# Edit at https://www.toptal.com/developers/gitignore?templates=macos,swift
+# Created by https://www.toptal.com/developers/gitignore/api/macos,swift,cocoapods
+# Edit at https://www.toptal.com/developers/gitignore?templates=macos,swift,cocoapods
+
+### CocoaPods ###
+## CocoaPods GitIgnore Template
+
+# CocoaPods - Only use to conserve bandwidth / Save time on Pushing
+#           - Also handy if you have a large number of dependant pods
+#           - AS PER https://guides.cocoapods.org/using/using-cocoapods.html NEVER IGNORE THE LOCK FILE
+Pods/
 
 ### macOS ###
 # General
@@ -114,4 +122,4 @@ fastlane/test_output
 
 iOSInjectionProject/
 
-# End of https://www.toptal.com/developers/gitignore/api/macos,swift
+# End of https://www.toptal.com/developers/gitignore/api/macos,swift,cocoapods
