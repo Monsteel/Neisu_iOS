@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		41D344C7D3FE9779741F1D8F /* Pods_Neisu_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D859810B38008983AAD42AB /* Pods_Neisu_iOS.framework */; };
 		AE68DCEF252D481A00C68403 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE68DCEE252D481A00C68403 /* AppDelegate.swift */; };
 		AE68DCF1252D481A00C68403 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE68DCF0252D481A00C68403 /* SceneDelegate.swift */; };
 		AE68DCF3252D481A00C68403 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE68DCF2252D481A00C68403 /* ViewController.swift */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5D859810B38008983AAD42AB /* Pods_Neisu_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Neisu_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9569F3C98F01ADB6354BCFC4 /* Pods-Neisu_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neisu_iOS.debug.xcconfig"; path = "Target Support Files/Pods-Neisu_iOS/Pods-Neisu_iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		AE68DCEB252D481A00C68403 /* Neisu_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Neisu_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE68DCEE252D481A00C68403 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE68DCF0252D481A00C68403 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		AE68DCF7252D481B00C68403 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE68DCFA252D481B00C68403 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AE68DCFC252D481B00C68403 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E6B31C8B2F530B1E9D041F25 /* Pods-Neisu_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neisu_iOS.release.xcconfig"; path = "Target Support Files/Pods-Neisu_iOS/Pods-Neisu_iOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +35,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41D344C7D3FE9779741F1D8F /* Pods_Neisu_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6274D12773E363F10D0311DD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9569F3C98F01ADB6354BCFC4 /* Pods-Neisu_iOS.debug.xcconfig */,
+				E6B31C8B2F530B1E9D041F25 /* Pods-Neisu_iOS.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		AE68DCE2252D481A00C68403 = {
 			isa = PBXGroup;
 			children = (
 				AE68DCED252D481A00C68403 /* Neisu_iOS */,
 				AE68DCEC252D481A00C68403 /* Products */,
+				6274D12773E363F10D0311DD /* Pods */,
+				E13FB0A3CB8E160660F45BA1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +84,14 @@
 			path = Neisu_iOS;
 			sourceTree = "<group>";
 		};
+		E13FB0A3CB8E160660F45BA1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5D859810B38008983AAD42AB /* Pods_Neisu_iOS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AE68DCFF252D481B00C68403 /* Build configuration list for PBXNativeTarget "Neisu_iOS" */;
 			buildPhases = (
+				C9B0FF3A7FAF00F07E979E74 /* [CP] Check Pods Manifest.lock */,
 				AE68DCE7252D481A00C68403 /* Sources */,
 				AE68DCE8252D481A00C68403 /* Frameworks */,
 				AE68DCE9252D481A00C68403 /* Resources */,
+				D5A1E99513B94D0682947C2C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C9B0FF3A7FAF00F07E979E74 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Neisu_iOS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D5A1E99513B94D0682947C2C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Neisu_iOS/Pods-Neisu_iOS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Neisu_iOS/Pods-Neisu_iOS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Neisu_iOS/Pods-Neisu_iOS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AE68DCE7252D481A00C68403 /* Sources */ = {
@@ -283,6 +352,7 @@
 		};
 		AE68DD00252D481B00C68403 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9569F3C98F01ADB6354BCFC4 /* Pods-Neisu_iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +372,7 @@
 		};
 		AE68DD01252D481B00C68403 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6B31C8B2F530B1E9D041F25 /* Pods-Neisu_iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
