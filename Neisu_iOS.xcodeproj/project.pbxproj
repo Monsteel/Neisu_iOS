@@ -3,22 +3,129 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		41D344C7D3FE9779741F1D8F /* Pods_Neisu_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D859810B38008983AAD42AB /* Pods_Neisu_iOS.framework */; };
+		AE09CA8F2548F09600D83A9A /* MelasType.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE09CA8E2548F09600D83A9A /* MelasType.swift */; };
+		AE09CA922548F81500D83A9A /* SchoolController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE09CA912548F81500D83A9A /* SchoolController.swift */; };
+		AE09CA962548FE3100D83A9A /* MealsRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE09CA952548FE3100D83A9A /* MealsRepositoryImpl.swift */; };
+		AE09CA9C2548FE5A00D83A9A /* MealsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE09CA9B2548FE5A00D83A9A /* MealsRepository.swift */; };
+		AE09CAA32548FF8D00D83A9A /* GetMealByMonthUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE09CAA22548FF8D00D83A9A /* GetMealByMonthUseCase.swift */; };
+		AE09CAA72548FF9D00D83A9A /* InsertMealByMonthUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE09CAA62548FF9D00D83A9A /* InsertMealByMonthUseCase.swift */; };
+		AE09CAAA2548FFB300D83A9A /* DeleteAllMealUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE09CAA92548FFB300D83A9A /* DeleteAllMealUseCase.swift */; };
+		AE09CAAE254904B000D83A9A /* SchoolRemote.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE09CAAD254904B000D83A9A /* SchoolRemote.swift */; };
+		AE09CAB12549058900D83A9A /* SchoolDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE09CAB02549058900D83A9A /* SchoolDataSource.swift */; };
+		AE09CAB4254905DA00D83A9A /* SchoolRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE09CAB3254905DA00D83A9A /* SchoolRepositoryImpl.swift */; };
+		AE09CAB9254905F400D83A9A /* SchoolRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE09CAB8254905F400D83A9A /* SchoolRepository.swift */; };
+		AE09CABD254906DC00D83A9A /* SearchSchoolUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE09CABC254906DC00D83A9A /* SearchSchoolUseCase.swift */; };
+		AE3BBA3E25367A0D006E92D7 /* BaseUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3BB9AB25367A0D006E92D7 /* BaseUseCase.swift */; };
+		AE3BBA3F25367A0D006E92D7 /* BaseRemote.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3BB9AC25367A0D006E92D7 /* BaseRemote.swift */; };
+		AE3BBA4025367A0D006E92D7 /* ParamUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3BB9AD25367A0D006E92D7 /* ParamUseCase.swift */; };
+		AE3BBA4125367A0D006E92D7 /* BaseCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3BB9AE25367A0D006E92D7 /* BaseCache.swift */; };
+		AE3BBA4225367A0D006E92D7 /* BaseDbManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3BB9AF25367A0D006E92D7 /* BaseDbManager.swift */; };
+		AE3BBA4325367A0D006E92D7 /* BaseDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3BB9B025367A0D006E92D7 /* BaseDataSource.swift */; };
+		AE3BBA4625367A0D006E92D7 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3BB9B425367A0D006E92D7 /* CardView.swift */; };
+		AE3BBA4725367A0D006E92D7 /* ProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3BB9B525367A0D006E92D7 /* ProfileImageView.swift */; };
+		AE3BBA6125367A0E006E92D7 /* NeisSchoolSearchAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3BB9DD25367A0D006E92D7 /* NeisSchoolSearchAPI.swift */; };
+		AE3BBA9A25367A0E006E92D7 /* MealDbManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3BBA2325367A0D006E92D7 /* MealDbManager.swift */; };
+		AE3BBA9B25367A0E006E92D7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3BBA2525367A0D006E92D7 /* Constants.swift */; };
+		AE3BBA9C25367A0E006E92D7 /* Constants.swift.example in Resources */ = {isa = PBXBuildFile; fileRef = AE3BBA2625367A0D006E92D7 /* Constants.swift.example */; };
+		AE3BBA9F25367A0E006E92D7 /* DataSourceAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3BBA2B25367A0D006E92D7 /* DataSourceAssembly.swift */; };
+		AE3BBAA025367A0E006E92D7 /* ReactorAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3BBA2C25367A0D006E92D7 /* ReactorAssembly.swift */; };
+		AE3BBAA125367A0E006E92D7 /* RepositoryAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3BBA2D25367A0D006E92D7 /* RepositoryAssembly.swift */; };
+		AE3BBAA225367A0E006E92D7 /* UseCaseAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3BBA2E25367A0D006E92D7 /* UseCaseAssembly.swift */; };
+		AE3BBAA325367A0E006E92D7 /* DependencyProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3BBA3025367A0D006E92D7 /* DependencyProvider.swift */; };
+		AE3BBAA425367A0E006E92D7 /* DataBaseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3BBA3225367A0D006E92D7 /* DataBaseError.swift */; };
+		AE3BBAA525367A0E006E92D7 /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3BBA3325367A0D006E92D7 /* CustomError.swift */; };
+		AE3BBAA625367A0E006E92D7 /* NetWorkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3BBA3425367A0D006E92D7 /* NetWorkError.swift */; };
+		AE3BBAA725367A0E006E92D7 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3BBA3625367A0D006E92D7 /* Date.swift */; };
+		AE3BBAA825367A0E006E92D7 /* Reactive.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3BBA3725367A0D006E92D7 /* Reactive.swift */; };
+		AE3BBAA925367A0E006E92D7 /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3BBA3825367A0D006E92D7 /* Formatter.swift */; };
+		AE3BBAAA25367A0E006E92D7 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3BBA3925367A0D006E92D7 /* String.swift */; };
+		AE3BBAAB25367A0E006E92D7 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3BBA3A25367A0D006E92D7 /* UIViewController.swift */; };
+		AE3BBAAC25367A0E006E92D7 /* UIActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3BBA3B25367A0D006E92D7 /* UIActivityIndicatorView.swift */; };
+		AE3BBAAD25367A0E006E92D7 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3BBA3C25367A0D006E92D7 /* UIImageView.swift */; };
+		AE3BBAAE25367A0E006E92D7 /* UIAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3BBA3D25367A0D006E92D7 /* UIAlertController.swift */; };
+		AE3BBABC25367C05006E92D7 /* MealServiceDietInfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3BBABB25367C05006E92D7 /* MealServiceDietInfoResponse.swift */; };
+		AE3BBACB2536830D006E92D7 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3BBACA2536830D006E92D7 /* Header.swift */; };
+		AE3BBACF25368377006E92D7 /* ListCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3BBACE25368377006E92D7 /* ListCount.swift */; };
+		AE3BBAD3253683A0006E92D7 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3BBAD2253683A0006E92D7 /* Result.swift */; };
+		AE3BBADB25368630006E92D7 /* Rower.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3BBADA25368630006E92D7 /* Rower.swift */; };
+		AE3BBADF253688F3006E92D7 /* SchoolInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3BBADE253688F3006E92D7 /* SchoolInfo.swift */; };
+		AE3BBAE325368AD8006E92D7 /* Temp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3BBAE225368AD8006E92D7 /* Temp.swift */; };
+		AE3BBAE725368B00006E92D7 /* HeadTemp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3BBAE625368B00006E92D7 /* HeadTemp.swift */; };
+		AE3C9EFB253FB62400CF1157 /* MealsDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3C9EFA253FB62400CF1157 /* MealsDataSource.swift */; };
+		AE3C9EFE253FB69600CF1157 /* MealsCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3C9EFD253FB69600CF1157 /* MealsCache.swift */; };
 		AE68DCEF252D481A00C68403 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE68DCEE252D481A00C68403 /* AppDelegate.swift */; };
 		AE68DCF1252D481A00C68403 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE68DCF0252D481A00C68403 /* SceneDelegate.swift */; };
 		AE68DCF3252D481A00C68403 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE68DCF2252D481A00C68403 /* ViewController.swift */; };
 		AE68DCF6252D481A00C68403 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE68DCF4252D481A00C68403 /* Main.storyboard */; };
 		AE68DCF8252D481B00C68403 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE68DCF7252D481B00C68403 /* Assets.xcassets */; };
 		AE68DCFB252D481B00C68403 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE68DCF9252D481B00C68403 /* LaunchScreen.storyboard */; };
+		AEA801872536938200177EA3 /* MealInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA801862536938200177EA3 /* MealInfo.swift */; };
+		AEA801952536972800177EA3 /* SchoolInfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA801942536972800177EA3 /* SchoolInfoResponse.swift */; };
+		AEA8019D25369B3B00177EA3 /* NeisMealsSearchAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA8019C25369B3B00177EA3 /* NeisMealsSearchAPI.swift */; };
+		AEAD557E253B3EB900D78EC4 /* GetMealsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAD557D253B3EB800D78EC4 /* GetMealsRequest.swift */; };
+		AEAD5581253B413600D78EC4 /* GetSchoolRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAD5580253B413600D78EC4 /* GetSchoolRequest.swift */; };
+		AEAD5587253B4FC200D78EC4 /* MealsRemote.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAD5586253B4FC200D78EC4 /* MealsRemote.swift */; };
+		AEAD558B253B504400D78EC4 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAD558A253B504400D78EC4 /* Meal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5D859810B38008983AAD42AB /* Pods_Neisu_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Neisu_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9569F3C98F01ADB6354BCFC4 /* Pods-Neisu_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neisu_iOS.debug.xcconfig"; path = "Target Support Files/Pods-Neisu_iOS/Pods-Neisu_iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		AE09CA8E2548F09600D83A9A /* MelasType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MelasType.swift; sourceTree = "<group>"; };
+		AE09CA912548F81500D83A9A /* SchoolController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolController.swift; sourceTree = "<group>"; };
+		AE09CA952548FE3100D83A9A /* MealsRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsRepositoryImpl.swift; sourceTree = "<group>"; };
+		AE09CA9B2548FE5A00D83A9A /* MealsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsRepository.swift; sourceTree = "<group>"; };
+		AE09CAA22548FF8D00D83A9A /* GetMealByMonthUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMealByMonthUseCase.swift; sourceTree = "<group>"; };
+		AE09CAA62548FF9D00D83A9A /* InsertMealByMonthUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertMealByMonthUseCase.swift; sourceTree = "<group>"; };
+		AE09CAA92548FFB300D83A9A /* DeleteAllMealUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteAllMealUseCase.swift; sourceTree = "<group>"; };
+		AE09CAAD254904B000D83A9A /* SchoolRemote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolRemote.swift; sourceTree = "<group>"; };
+		AE09CAB02549058900D83A9A /* SchoolDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolDataSource.swift; sourceTree = "<group>"; };
+		AE09CAB3254905DA00D83A9A /* SchoolRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolRepositoryImpl.swift; sourceTree = "<group>"; };
+		AE09CAB8254905F400D83A9A /* SchoolRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolRepository.swift; sourceTree = "<group>"; };
+		AE09CABC254906DC00D83A9A /* SearchSchoolUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSchoolUseCase.swift; sourceTree = "<group>"; };
+		AE3BB9AB25367A0D006E92D7 /* BaseUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseUseCase.swift; sourceTree = "<group>"; };
+		AE3BB9AC25367A0D006E92D7 /* BaseRemote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseRemote.swift; sourceTree = "<group>"; };
+		AE3BB9AD25367A0D006E92D7 /* ParamUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParamUseCase.swift; sourceTree = "<group>"; };
+		AE3BB9AE25367A0D006E92D7 /* BaseCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCache.swift; sourceTree = "<group>"; };
+		AE3BB9AF25367A0D006E92D7 /* BaseDbManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseDbManager.swift; sourceTree = "<group>"; };
+		AE3BB9B025367A0D006E92D7 /* BaseDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseDataSource.swift; sourceTree = "<group>"; };
+		AE3BB9B425367A0D006E92D7 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		AE3BB9B525367A0D006E92D7 /* ProfileImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileImageView.swift; sourceTree = "<group>"; };
+		AE3BB9DD25367A0D006E92D7 /* NeisSchoolSearchAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeisSchoolSearchAPI.swift; sourceTree = "<group>"; };
+		AE3BBA2325367A0D006E92D7 /* MealDbManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealDbManager.swift; sourceTree = "<group>"; };
+		AE3BBA2525367A0D006E92D7 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		AE3BBA2625367A0D006E92D7 /* Constants.swift.example */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Constants.swift.example; sourceTree = "<group>"; };
+		AE3BBA2B25367A0D006E92D7 /* DataSourceAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataSourceAssembly.swift; sourceTree = "<group>"; };
+		AE3BBA2C25367A0D006E92D7 /* ReactorAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReactorAssembly.swift; sourceTree = "<group>"; };
+		AE3BBA2D25367A0D006E92D7 /* RepositoryAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepositoryAssembly.swift; sourceTree = "<group>"; };
+		AE3BBA2E25367A0D006E92D7 /* UseCaseAssembly.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UseCaseAssembly.swift; sourceTree = "<group>"; };
+		AE3BBA3025367A0D006E92D7 /* DependencyProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DependencyProvider.swift; sourceTree = "<group>"; };
+		AE3BBA3225367A0D006E92D7 /* DataBaseError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataBaseError.swift; sourceTree = "<group>"; };
+		AE3BBA3325367A0D006E92D7 /* CustomError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
+		AE3BBA3425367A0D006E92D7 /* NetWorkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetWorkError.swift; sourceTree = "<group>"; };
+		AE3BBA3625367A0D006E92D7 /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		AE3BBA3725367A0D006E92D7 /* Reactive.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reactive.swift; sourceTree = "<group>"; };
+		AE3BBA3825367A0D006E92D7 /* Formatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
+		AE3BBA3925367A0D006E92D7 /* String.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		AE3BBA3A25367A0D006E92D7 /* UIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		AE3BBA3B25367A0D006E92D7 /* UIActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIActivityIndicatorView.swift; sourceTree = "<group>"; };
+		AE3BBA3C25367A0D006E92D7 /* UIImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		AE3BBA3D25367A0D006E92D7 /* UIAlertController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertController.swift; sourceTree = "<group>"; };
+		AE3BBABB25367C05006E92D7 /* MealServiceDietInfoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealServiceDietInfoResponse.swift; sourceTree = "<group>"; };
+		AE3BBACA2536830D006E92D7 /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
+		AE3BBACE25368377006E92D7 /* ListCount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCount.swift; sourceTree = "<group>"; };
+		AE3BBAD2253683A0006E92D7 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		AE3BBADA25368630006E92D7 /* Rower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rower.swift; sourceTree = "<group>"; };
+		AE3BBADE253688F3006E92D7 /* SchoolInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolInfo.swift; sourceTree = "<group>"; };
+		AE3BBAE225368AD8006E92D7 /* Temp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Temp.swift; sourceTree = "<group>"; };
+		AE3BBAE625368B00006E92D7 /* HeadTemp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadTemp.swift; sourceTree = "<group>"; };
+		AE3C9EFA253FB62400CF1157 /* MealsDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsDataSource.swift; sourceTree = "<group>"; };
+		AE3C9EFD253FB69600CF1157 /* MealsCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsCache.swift; sourceTree = "<group>"; };
 		AE68DCEB252D481A00C68403 /* Neisu_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Neisu_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE68DCEE252D481A00C68403 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE68DCF0252D481A00C68403 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -27,6 +134,13 @@
 		AE68DCF7252D481B00C68403 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE68DCFA252D481B00C68403 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AE68DCFC252D481B00C68403 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AEA801862536938200177EA3 /* MealInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealInfo.swift; sourceTree = "<group>"; };
+		AEA801942536972800177EA3 /* SchoolInfoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolInfoResponse.swift; sourceTree = "<group>"; };
+		AEA8019C25369B3B00177EA3 /* NeisMealsSearchAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeisMealsSearchAPI.swift; sourceTree = "<group>"; };
+		AEAD557D253B3EB800D78EC4 /* GetMealsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetMealsRequest.swift; sourceTree = "<group>"; };
+		AEAD5580253B413600D78EC4 /* GetSchoolRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetSchoolRequest.swift; sourceTree = "<group>"; };
+		AEAD5586253B4FC200D78EC4 /* MealsRemote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsRemote.swift; sourceTree = "<group>"; };
+		AEAD558A253B504400D78EC4 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		E6B31C8B2F530B1E9D041F25 /* Pods-Neisu_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neisu_iOS.release.xcconfig"; path = "Target Support Files/Pods-Neisu_iOS/Pods-Neisu_iOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -48,8 +162,238 @@
 				9569F3C98F01ADB6354BCFC4 /* Pods-Neisu_iOS.debug.xcconfig */,
 				E6B31C8B2F530B1E9D041F25 /* Pods-Neisu_iOS.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		AE09CA8D2548F08D00D83A9A /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				AE09CA8E2548F09600D83A9A /* MelasType.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
+		AE09CA942548FE1700D83A9A /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				AE09CA952548FE3100D83A9A /* MealsRepositoryImpl.swift */,
+				AE09CAB3254905DA00D83A9A /* SchoolRepositoryImpl.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		AE09CA9A2548FE4B00D83A9A /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				AE09CA9B2548FE5A00D83A9A /* MealsRepository.swift */,
+				AE09CAB8254905F400D83A9A /* SchoolRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		AE09CA9F2548FF0500D83A9A /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				AE09CABB254906CF00D83A9A /* School */,
+				AE09CAA12548FF7400D83A9A /* Meals */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		AE09CAA12548FF7400D83A9A /* Meals */ = {
+			isa = PBXGroup;
+			children = (
+				AE09CAA22548FF8D00D83A9A /* GetMealByMonthUseCase.swift */,
+				AE09CAA62548FF9D00D83A9A /* InsertMealByMonthUseCase.swift */,
+				AE09CAA92548FFB300D83A9A /* DeleteAllMealUseCase.swift */,
+			);
+			path = Meals;
+			sourceTree = "<group>";
+		};
+		AE09CABB254906CF00D83A9A /* School */ = {
+			isa = PBXGroup;
+			children = (
+				AE09CABC254906DC00D83A9A /* SearchSchoolUseCase.swift */,
+			);
+			path = School;
+			sourceTree = "<group>";
+		};
+		AE3BB9AA25367A0D006E92D7 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				AE3BB9AB25367A0D006E92D7 /* BaseUseCase.swift */,
+				AE3BB9AC25367A0D006E92D7 /* BaseRemote.swift */,
+				AE3BB9AD25367A0D006E92D7 /* ParamUseCase.swift */,
+				AE3BB9AE25367A0D006E92D7 /* BaseCache.swift */,
+				AE3BB9AF25367A0D006E92D7 /* BaseDbManager.swift */,
+				AE3BB9B025367A0D006E92D7 /* BaseDataSource.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		AE3BB9B225367A0D006E92D7 /* CustomUI */ = {
+			isa = PBXGroup;
+			children = (
+				AE3BB9B425367A0D006E92D7 /* CardView.swift */,
+				AE3BB9B525367A0D006E92D7 /* ProfileImageView.swift */,
+			);
+			path = CustomUI;
+			sourceTree = "<group>";
+		};
+		AE3BB9B925367A0D006E92D7 /* NetWork */ = {
+			isa = PBXGroup;
+			children = (
+				AE3BB9BA25367A0D006E92D7 /* Response */,
+				AE3BB9DC25367A0D006E92D7 /* API */,
+				AE3BB9EA25367A0D006E92D7 /* Request */,
+			);
+			path = NetWork;
+			sourceTree = "<group>";
+		};
+		AE3BB9BA25367A0D006E92D7 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				AE3BBB00253692AC006E92D7 /* Base */,
+				AE3BBAFF253692A7006E92D7 /* Data */,
+				AEA801942536972800177EA3 /* SchoolInfoResponse.swift */,
+				AE3BBABB25367C05006E92D7 /* MealServiceDietInfoResponse.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		AE3BB9DC25367A0D006E92D7 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				AE3BB9DD25367A0D006E92D7 /* NeisSchoolSearchAPI.swift */,
+				AEA8019C25369B3B00177EA3 /* NeisMealsSearchAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		AE3BB9EA25367A0D006E92D7 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				AEAD557D253B3EB800D78EC4 /* GetMealsRequest.swift */,
+				AEAD5580253B413600D78EC4 /* GetSchoolRequest.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		AE3BBA1C25367A0D006E92D7 /* DataBase */ = {
+			isa = PBXGroup;
+			children = (
+				AE3BBA2325367A0D006E92D7 /* MealDbManager.swift */,
+			);
+			path = DataBase;
+			sourceTree = "<group>";
+		};
+		AE3BBA2425367A0D006E92D7 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				AE3BBA2525367A0D006E92D7 /* Constants.swift */,
+				AE3BBA2625367A0D006E92D7 /* Constants.swift.example */,
+				AE09CA912548F81500D83A9A /* SchoolController.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		AE3BBA2925367A0D006E92D7 /* Di */ = {
+			isa = PBXGroup;
+			children = (
+				AE3BBA2F25367A0D006E92D7 /* Provider */,
+				AE3BBA2A25367A0D006E92D7 /* Assembly */,
+			);
+			path = Di;
+			sourceTree = "<group>";
+		};
+		AE3BBA2A25367A0D006E92D7 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				AE3BBA2B25367A0D006E92D7 /* DataSourceAssembly.swift */,
+				AE3BBA2C25367A0D006E92D7 /* ReactorAssembly.swift */,
+				AE3BBA2D25367A0D006E92D7 /* RepositoryAssembly.swift */,
+				AE3BBA2E25367A0D006E92D7 /* UseCaseAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		AE3BBA2F25367A0D006E92D7 /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				AE3BBA3025367A0D006E92D7 /* DependencyProvider.swift */,
+			);
+			path = Provider;
+			sourceTree = "<group>";
+		};
+		AE3BBA3125367A0D006E92D7 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				AE3BBA3225367A0D006E92D7 /* DataBaseError.swift */,
+				AE3BBA3325367A0D006E92D7 /* CustomError.swift */,
+				AE3BBA3425367A0D006E92D7 /* NetWorkError.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		AE3BBA3525367A0D006E92D7 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				AE3BBA3625367A0D006E92D7 /* Date.swift */,
+				AE3BBA3725367A0D006E92D7 /* Reactive.swift */,
+				AE3BBA3825367A0D006E92D7 /* Formatter.swift */,
+				AE3BBA3925367A0D006E92D7 /* String.swift */,
+				AE3BBA3A25367A0D006E92D7 /* UIViewController.swift */,
+				AE3BBA3B25367A0D006E92D7 /* UIActivityIndicatorView.swift */,
+				AE3BBA3C25367A0D006E92D7 /* UIImageView.swift */,
+				AE3BBA3D25367A0D006E92D7 /* UIAlertController.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		AE3BBACD25368363006E92D7 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				AE3BBACA2536830D006E92D7 /* Header.swift */,
+				AE3BBACE25368377006E92D7 /* ListCount.swift */,
+				AE3BBAD2253683A0006E92D7 /* Result.swift */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
+		AE3BBAD925368623006E92D7 /* Rower */ = {
+			isa = PBXGroup;
+			children = (
+				AE3BBADA25368630006E92D7 /* Rower.swift */,
+			);
+			path = Rower;
+			sourceTree = "<group>";
+		};
+		AE3BBAE125368ACD006E92D7 /* Temp */ = {
+			isa = PBXGroup;
+			children = (
+				AE3BBAE225368AD8006E92D7 /* Temp.swift */,
+				AE3BBAE625368B00006E92D7 /* HeadTemp.swift */,
+			);
+			path = Temp;
+			sourceTree = "<group>";
+		};
+		AE3BBAFF253692A7006E92D7 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				AE3BBADE253688F3006E92D7 /* SchoolInfo.swift */,
+				AEA801862536938200177EA3 /* MealInfo.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		AE3BBB00253692AC006E92D7 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				AE3BBAD925368623006E92D7 /* Rower */,
+				AE3BBACD25368363006E92D7 /* Header */,
+				AE3BBAE125368ACD006E92D7 /* Temp */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 		AE68DCE2252D481A00C68403 = {
@@ -73,15 +417,129 @@
 		AE68DCED252D481A00C68403 /* Neisu_iOS */ = {
 			isa = PBXGroup;
 			children = (
-				AE68DCEE252D481A00C68403 /* AppDelegate.swift */,
-				AE68DCF0252D481A00C68403 /* SceneDelegate.swift */,
-				AE68DCF2252D481A00C68403 /* ViewController.swift */,
-				AE68DCF4252D481A00C68403 /* Main.storyboard */,
-				AE68DCF7252D481B00C68403 /* Assets.xcassets */,
-				AE68DCF9252D481B00C68403 /* LaunchScreen.storyboard */,
+				AEC237E4253678E500B5938F /* Source */,
+				AEC237E5253678EA00B5938F /* Resource */,
 				AE68DCFC252D481B00C68403 /* Info.plist */,
 			);
 			path = Neisu_iOS;
+			sourceTree = "<group>";
+		};
+		AEAD5583253B4FAE00D78EC4 /* Cache */ = {
+			isa = PBXGroup;
+			children = (
+				AE3C9EFD253FB69600CF1157 /* MealsCache.swift */,
+			);
+			path = Cache;
+			sourceTree = "<group>";
+		};
+		AEAD5584253B4FB300D78EC4 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				AEAD5586253B4FC200D78EC4 /* MealsRemote.swift */,
+				AE09CAAD254904B000D83A9A /* SchoolRemote.swift */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		AEAD5585253B4FB800D78EC4 /* DataSource */ = {
+			isa = PBXGroup;
+			children = (
+				AE3C9EFA253FB62400CF1157 /* MealsDataSource.swift */,
+				AE09CAB02549058900D83A9A /* SchoolDataSource.swift */,
+			);
+			path = DataSource;
+			sourceTree = "<group>";
+		};
+		AEC237E4253678E500B5938F /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				AE68DCEE252D481A00C68403 /* AppDelegate.swift */,
+				AE68DCF0252D481A00C68403 /* SceneDelegate.swift */,
+				AEC237E92536794A00B5938F /* widget */,
+				AEC237EA2536795400B5938F /* Model */,
+				AEC237E82536794700B5938F /* Data */,
+				AEC237E72536794400B5938F /* Domain */,
+				AEC237E62536793500B5938F /* Presentation */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		AEC237E5253678EA00B5938F /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				AE68DCF7252D481B00C68403 /* Assets.xcassets */,
+				AE68DCF9252D481B00C68403 /* LaunchScreen.storyboard */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		AEC237E62536793500B5938F /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				AEC237EC2536796500B5938F /* Reactor */,
+				AEC237EB2536796300B5938F /* View */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		AEC237E72536794400B5938F /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				AE09CA9F2548FF0500D83A9A /* UseCase */,
+				AE09CA9A2548FE4B00D83A9A /* Repository */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		AEC237E82536794700B5938F /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				AEAD5585253B4FB800D78EC4 /* DataSource */,
+				AEAD5584253B4FB300D78EC4 /* Remote */,
+				AEAD5583253B4FAE00D78EC4 /* Cache */,
+				AE09CA942548FE1700D83A9A /* Repository */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		AEC237E92536794A00B5938F /* widget */ = {
+			isa = PBXGroup;
+			children = (
+				AE09CA8D2548F08D00D83A9A /* Enum */,
+				AE3BB9AA25367A0D006E92D7 /* Base */,
+				AE3BB9B225367A0D006E92D7 /* CustomUI */,
+				AE3BBA1C25367A0D006E92D7 /* DataBase */,
+				AE3BBA2925367A0D006E92D7 /* Di */,
+				AE3BBA3125367A0D006E92D7 /* Error */,
+				AE3BBA3525367A0D006E92D7 /* Extension */,
+				AE3BB9B925367A0D006E92D7 /* NetWork */,
+				AE3BBA2425367A0D006E92D7 /* Util */,
+			);
+			path = widget;
+			sourceTree = "<group>";
+		};
+		AEC237EA2536795400B5938F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AEAD558A253B504400D78EC4 /* Meal.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AEC237EB2536796300B5938F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AE68DCF2252D481A00C68403 /* ViewController.swift */,
+				AE68DCF4252D481A00C68403 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AEC237EC2536796500B5938F /* Reactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Reactor;
 			sourceTree = "<group>";
 		};
 		E13FB0A3CB8E160660F45BA1 /* Frameworks */ = {
@@ -152,6 +610,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE68DCFB252D481B00C68403 /* LaunchScreen.storyboard in Resources */,
+				AE3BBA9C25367A0E006E92D7 /* Constants.swift.example in Resources */,
 				AE68DCF8252D481B00C68403 /* Assets.xcassets in Resources */,
 				AE68DCF6252D481A00C68403 /* Main.storyboard in Resources */,
 			);
@@ -206,9 +665,65 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE09CA962548FE3100D83A9A /* MealsRepositoryImpl.swift in Sources */,
+				AE3BBA3E25367A0D006E92D7 /* BaseUseCase.swift in Sources */,
+				AE3BBA9B25367A0E006E92D7 /* Constants.swift in Sources */,
+				AE3BBAAE25367A0E006E92D7 /* UIAlertController.swift in Sources */,
+				AE3BBAAC25367A0E006E92D7 /* UIActivityIndicatorView.swift in Sources */,
+				AE3C9EFE253FB69600CF1157 /* MealsCache.swift in Sources */,
+				AE3BBA4025367A0D006E92D7 /* ParamUseCase.swift in Sources */,
+				AE3BBAAB25367A0E006E92D7 /* UIViewController.swift in Sources */,
+				AE09CA922548F81500D83A9A /* SchoolController.swift in Sources */,
+				AE09CAAA2548FFB300D83A9A /* DeleteAllMealUseCase.swift in Sources */,
+				AE3BBAA925367A0E006E92D7 /* Formatter.swift in Sources */,
+				AE3BBABC25367C05006E92D7 /* MealServiceDietInfoResponse.swift in Sources */,
+				AE3BBACB2536830D006E92D7 /* Header.swift in Sources */,
+				AE3BBAE725368B00006E92D7 /* HeadTemp.swift in Sources */,
+				AE3BBA9A25367A0E006E92D7 /* MealDbManager.swift in Sources */,
+				AE3BBA4225367A0D006E92D7 /* BaseDbManager.swift in Sources */,
+				AE3BBACF25368377006E92D7 /* ListCount.swift in Sources */,
+				AE3BBAAA25367A0E006E92D7 /* String.swift in Sources */,
+				AE3BBAA025367A0E006E92D7 /* ReactorAssembly.swift in Sources */,
+				AE3C9EFB253FB62400CF1157 /* MealsDataSource.swift in Sources */,
+				AE3BBAA425367A0E006E92D7 /* DataBaseError.swift in Sources */,
+				AE3BBAA825367A0E006E92D7 /* Reactive.swift in Sources */,
+				AE3BBA4325367A0D006E92D7 /* BaseDataSource.swift in Sources */,
+				AE3BBAA325367A0E006E92D7 /* DependencyProvider.swift in Sources */,
+				AE3BBAD3253683A0006E92D7 /* Result.swift in Sources */,
+				AE09CAB4254905DA00D83A9A /* SchoolRepositoryImpl.swift in Sources */,
+				AE3BBADF253688F3006E92D7 /* SchoolInfo.swift in Sources */,
+				AE09CA9C2548FE5A00D83A9A /* MealsRepository.swift in Sources */,
+				AEAD557E253B3EB900D78EC4 /* GetMealsRequest.swift in Sources */,
+				AE09CAA32548FF8D00D83A9A /* GetMealByMonthUseCase.swift in Sources */,
+				AEAD5581253B413600D78EC4 /* GetSchoolRequest.swift in Sources */,
+				AE09CAAE254904B000D83A9A /* SchoolRemote.swift in Sources */,
+				AE3BBADB25368630006E92D7 /* Rower.swift in Sources */,
+				AE3BBAA125367A0E006E92D7 /* RepositoryAssembly.swift in Sources */,
+				AE3BBA9F25367A0E006E92D7 /* DataSourceAssembly.swift in Sources */,
+				AE3BBAE325368AD8006E92D7 /* Temp.swift in Sources */,
+				AE3BBA4725367A0D006E92D7 /* ProfileImageView.swift in Sources */,
+				AE3BBAA225367A0E006E92D7 /* UseCaseAssembly.swift in Sources */,
+				AE3BBA4125367A0D006E92D7 /* BaseCache.swift in Sources */,
+				AE09CAA72548FF9D00D83A9A /* InsertMealByMonthUseCase.swift in Sources */,
 				AE68DCF3252D481A00C68403 /* ViewController.swift in Sources */,
 				AE68DCEF252D481A00C68403 /* AppDelegate.swift in Sources */,
 				AE68DCF1252D481A00C68403 /* SceneDelegate.swift in Sources */,
+				AE09CAB9254905F400D83A9A /* SchoolRepository.swift in Sources */,
+				AEA801952536972800177EA3 /* SchoolInfoResponse.swift in Sources */,
+				AEA8019D25369B3B00177EA3 /* NeisMealsSearchAPI.swift in Sources */,
+				AEA801872536938200177EA3 /* MealInfo.swift in Sources */,
+				AE3BBA3F25367A0D006E92D7 /* BaseRemote.swift in Sources */,
+				AE3BBAA725367A0E006E92D7 /* Date.swift in Sources */,
+				AE3BBA4625367A0D006E92D7 /* CardView.swift in Sources */,
+				AE09CABD254906DC00D83A9A /* SearchSchoolUseCase.swift in Sources */,
+				AE3BBAAD25367A0E006E92D7 /* UIImageView.swift in Sources */,
+				AEAD558B253B504400D78EC4 /* Meal.swift in Sources */,
+				AE3BBAA525367A0E006E92D7 /* CustomError.swift in Sources */,
+				AE3BBAA625367A0E006E92D7 /* NetWorkError.swift in Sources */,
+				AE09CAB12549058900D83A9A /* SchoolDataSource.swift in Sources */,
+				AEAD5587253B4FC200D78EC4 /* MealsRemote.swift in Sources */,
+				AE09CA8F2548F09600D83A9A /* MelasType.swift in Sources */,
+				AE3BBA6125367A0E006E92D7 /* NeisSchoolSearchAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

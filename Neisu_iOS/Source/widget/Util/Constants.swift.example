@@ -1,0 +1,12 @@
+//
+//  Constants.swift.example
+//  DodamDodam_iOS_V2
+//
+//  Created by Dev.Young on 28/07/2020.
+//
+
+struct Constants {
+    static let KEY = ""
+    static let DEFAULT_HOST = ""
+    static let INFINITE_SCROLL_LIMIT = 1000
+}
