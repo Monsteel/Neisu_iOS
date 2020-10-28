@@ -123,3 +123,6 @@ fastlane/test_output
 iOSInjectionProject/
 
 # End of https://www.toptal.com/developers/gitignore/api/macos,swift,cocoapods
+
+# More
+Neisu_iOS/Source/widget/Util/Constants.swift
