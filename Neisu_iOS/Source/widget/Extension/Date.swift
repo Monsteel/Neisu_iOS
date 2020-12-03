@@ -24,7 +24,7 @@ extension Date {
         var dateComponents = DateComponents()
         dateComponents.year = now.year
         dateComponents.month = now.month
-        dateComponents.day = now.day
+        dateComponents.day = now.date
         dateComponents.hour = hour
         dateComponents.hour = minute
         return calendar.date(from: dateComponents) ?? nil
@@ -37,11 +37,6 @@ extension Date {
     func before(_ date: Date) -> Bool {
         return self < date
     }
-    
-    func getEndofMonth() -> Int {
-        let calendar = Calendar(identifier: .gregorian)
-        return calendar.date(byAdding: .day, value: -1, to: self.add(month: 1) )?.day ?? 0
-    }
 
     func parse(_ string: String, format: String = "yyyy-MM-dd") -> Date {
         let dateFormatter = DateFormatter()
@@ -52,15 +47,15 @@ extension Date {
         return date
     }
     
-    func add(_ year: Int = 0, month:Int = 0, day:Int = 0, hour:Int = 0, minute:Int = 0, second:Int = 0) -> Date {
+    func add(_ year: Int = 0, month:Int = 0, date:Int = 0, hour:Int = 0, minute:Int = 0, second:Int = 0) -> Date {
         let calendar = Calendar(identifier: .gregorian)
         var dateComponents = DateComponents()
         dateComponents.year = self.year + year
         dateComponents.month = self.month + month
-        dateComponents.day = self.day + day
+        dateComponents.day = self.date + date
         dateComponents.hour = self.hour + hour
         dateComponents.minute = self.minute + minute
-        dateComponents.day = self.day + day
+        dateComponents.day = self.date + date
         dateComponents.second = self.second + second
         return calendar.date(from: dateComponents) ?? self
     }
@@ -79,7 +74,7 @@ extension Date {
         return yaer
     }
     
-    var day: Int {
+    var date: Int {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd"
         let day = Int(dateFormatter.string(from: self)) ?? 0

@@ -64,13 +64,22 @@
 		AE3C9EFE253FB69600CF1157 /* MealsCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3C9EFD253FB69600CF1157 /* MealsCache.swift */; };
 		AE68DCEF252D481A00C68403 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE68DCEE252D481A00C68403 /* AppDelegate.swift */; };
 		AE68DCF1252D481A00C68403 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE68DCF0252D481A00C68403 /* SceneDelegate.swift */; };
-		AE68DCF3252D481A00C68403 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE68DCF2252D481A00C68403 /* ViewController.swift */; };
 		AE68DCF6252D481A00C68403 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE68DCF4252D481A00C68403 /* Main.storyboard */; };
 		AE68DCF8252D481B00C68403 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE68DCF7252D481B00C68403 /* Assets.xcassets */; };
 		AE68DCFB252D481B00C68403 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AE68DCF9252D481B00C68403 /* LaunchScreen.storyboard */; };
 		AEA801872536938200177EA3 /* MealInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA801862536938200177EA3 /* MealInfo.swift */; };
 		AEA801952536972800177EA3 /* SchoolInfoResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA801942536972800177EA3 /* SchoolInfoResponse.swift */; };
 		AEA8019D25369B3B00177EA3 /* NeisMealsSearchAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA8019C25369B3B00177EA3 /* NeisMealsSearchAPI.swift */; };
+		AEACBB3D2578DB6900A11256 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEACBB3C2578DB6900A11256 /* SettingsTableViewController.swift */; };
+		AEACBB422578F35C00A11256 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEACBB412578F35C00A11256 /* SplashViewController.swift */; };
+		AEACBB452578F39F00A11256 /* SelectSchoolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEACBB442578F39F00A11256 /* SelectSchoolViewController.swift */; };
+		AEACBB482578F3AA00A11256 /* CheckSchoolViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEACBB472578F3AA00A11256 /* CheckSchoolViewController.swift */; };
+		AEACBB4E2578F3F500A11256 /* MealsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEACBB4D2578F3F500A11256 /* MealsViewController.swift */; };
+		AEACBB532578F45200A11256 /* SplashViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEACBB522578F45200A11256 /* SplashViewReactor.swift */; };
+		AEACBB582578F47500A11256 /* MealsViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEACBB572578F47500A11256 /* MealsViewReactor.swift */; };
+		AEACBB5B2578F49500A11256 /* SettingsTableViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEACBB5A2578F49500A11256 /* SettingsTableViewReactor.swift */; };
+		AEACBB5E2578F4A400A11256 /* SelectSchoolViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEACBB5D2578F4A400A11256 /* SelectSchoolViewReactor.swift */; };
+		AEACBB612578F4B200A11256 /* CheckSchoolViewReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEACBB602578F4B200A11256 /* CheckSchoolViewReactor.swift */; };
 		AEAD5587253B4FC200D78EC4 /* MealsRemote.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAD5586253B4FC200D78EC4 /* MealsRemote.swift */; };
 		AEAD558B253B504400D78EC4 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEAD558A253B504400D78EC4 /* Meal.swift */; };
 /* End PBXBuildFile section */
@@ -135,7 +144,6 @@
 		AE68DCEB252D481A00C68403 /* Neisu_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Neisu_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE68DCEE252D481A00C68403 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AE68DCF0252D481A00C68403 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AE68DCF2252D481A00C68403 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		AE68DCF5252D481A00C68403 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AE68DCF7252D481B00C68403 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AE68DCFA252D481B00C68403 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -143,6 +151,16 @@
 		AEA801862536938200177EA3 /* MealInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealInfo.swift; sourceTree = "<group>"; };
 		AEA801942536972800177EA3 /* SchoolInfoResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolInfoResponse.swift; sourceTree = "<group>"; };
 		AEA8019C25369B3B00177EA3 /* NeisMealsSearchAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeisMealsSearchAPI.swift; sourceTree = "<group>"; };
+		AEACBB3C2578DB6900A11256 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		AEACBB412578F35C00A11256 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		AEACBB442578F39F00A11256 /* SelectSchoolViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSchoolViewController.swift; sourceTree = "<group>"; };
+		AEACBB472578F3AA00A11256 /* CheckSchoolViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckSchoolViewController.swift; sourceTree = "<group>"; };
+		AEACBB4D2578F3F500A11256 /* MealsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsViewController.swift; sourceTree = "<group>"; };
+		AEACBB522578F45200A11256 /* SplashViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewReactor.swift; sourceTree = "<group>"; };
+		AEACBB572578F47500A11256 /* MealsViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsViewReactor.swift; sourceTree = "<group>"; };
+		AEACBB5A2578F49500A11256 /* SettingsTableViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewReactor.swift; sourceTree = "<group>"; };
+		AEACBB5D2578F4A400A11256 /* SelectSchoolViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectSchoolViewReactor.swift; sourceTree = "<group>"; };
+		AEACBB602578F4B200A11256 /* CheckSchoolViewReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckSchoolViewReactor.swift; sourceTree = "<group>"; };
 		AEAD5586253B4FC200D78EC4 /* MealsRemote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsRemote.swift; sourceTree = "<group>"; };
 		AEAD558A253B504400D78EC4 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		E6B31C8B2F530B1E9D041F25 /* Pods-Neisu_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Neisu_iOS.release.xcconfig"; path = "Target Support Files/Pods-Neisu_iOS/Pods-Neisu_iOS.release.xcconfig"; sourceTree = "<group>"; };
@@ -420,6 +438,42 @@
 			path = Neisu_iOS;
 			sourceTree = "<group>";
 		};
+		AEACBB4A2578F3B700A11256 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				AEACBB442578F39F00A11256 /* SelectSchoolViewController.swift */,
+				AEACBB472578F3AA00A11256 /* CheckSchoolViewController.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
+		AEACBB4B2578F3C200A11256 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				AEACBB3C2578DB6900A11256 /* SettingsTableViewController.swift */,
+				AEACBB4D2578F3F500A11256 /* MealsViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		AEACBB502578F43E00A11256 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				AEACBB572578F47500A11256 /* MealsViewReactor.swift */,
+				AEACBB5A2578F49500A11256 /* SettingsTableViewReactor.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		AEACBB512578F44200A11256 /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				AEACBB5D2578F4A400A11256 /* SelectSchoolViewReactor.swift */,
+				AEACBB602578F4B200A11256 /* CheckSchoolViewReactor.swift */,
+			);
+			path = Register;
+			sourceTree = "<group>";
+		};
 		AEAD5583253B4FAE00D78EC4 /* Cache */ = {
 			isa = PBXGroup;
 			children = (
@@ -527,7 +581,9 @@
 		AEC237EB2536796300B5938F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				AE68DCF2252D481A00C68403 /* ViewController.swift */,
+				AEACBB412578F35C00A11256 /* SplashViewController.swift */,
+				AEACBB4B2578F3C200A11256 /* Main */,
+				AEACBB4A2578F3B700A11256 /* Register */,
 				AE68DCF4252D481A00C68403 /* Main.storyboard */,
 			);
 			path = View;
@@ -536,6 +592,9 @@
 		AEC237EC2536796500B5938F /* Reactor */ = {
 			isa = PBXGroup;
 			children = (
+				AEACBB522578F45200A11256 /* SplashViewReactor.swift */,
+				AEACBB502578F43E00A11256 /* Main */,
+				AEACBB512578F44200A11256 /* Register */,
 			);
 			path = Reactor;
 			sourceTree = "<group>";
@@ -665,7 +724,9 @@
 			files = (
 				AE09CA962548FE3100D83A9A /* MealsRepositoryImpl.swift in Sources */,
 				AE3BBA3E25367A0D006E92D7 /* BaseUseCase.swift in Sources */,
+				AEACBB4E2578F3F500A11256 /* MealsViewController.swift in Sources */,
 				AE2BC11725772A1800BEDB72 /* DeleteSchoolUseCase.swift in Sources */,
+				AEACBB612578F4B200A11256 /* CheckSchoolViewReactor.swift in Sources */,
 				AE3BBA9B25367A0E006E92D7 /* Constants.swift in Sources */,
 				AE2BC11425772A0D00BEDB72 /* InsertSchoolUseCase.swift in Sources */,
 				AE3BBAAE25367A0E006E92D7 /* UIAlertController.swift in Sources */,
@@ -683,6 +744,7 @@
 				AE3BBAE725368B00006E92D7 /* HeadTemp.swift in Sources */,
 				AE3BBA9A25367A0E006E92D7 /* MealDbManager.swift in Sources */,
 				AE3BBA4225367A0D006E92D7 /* BaseDbManager.swift in Sources */,
+				AEACBB5B2578F49500A11256 /* SettingsTableViewReactor.swift in Sources */,
 				AE3BBACF25368377006E92D7 /* ListCount.swift in Sources */,
 				AE3BBAAA25367A0E006E92D7 /* String.swift in Sources */,
 				AE3BBAA025367A0E006E92D7 /* ReactorAssembly.swift in Sources */,
@@ -698,6 +760,7 @@
 				AE09CAAE254904B000D83A9A /* SchoolRemote.swift in Sources */,
 				AE2BC0FE257721B200BEDB72 /* SchoolCache.swift in Sources */,
 				AE3BBADB25368630006E92D7 /* Rower.swift in Sources */,
+				AEACBB452578F39F00A11256 /* SelectSchoolViewController.swift in Sources */,
 				AE3BBAA125367A0E006E92D7 /* RepositoryAssembly.swift in Sources */,
 				AE3BBA9F25367A0E006E92D7 /* DataSourceAssembly.swift in Sources */,
 				AE3BBAE325368AD8006E92D7 /* Temp.swift in Sources */,
@@ -705,25 +768,30 @@
 				AE3BBAA225367A0E006E92D7 /* UseCaseAssembly.swift in Sources */,
 				AE3BBA4125367A0D006E92D7 /* BaseCache.swift in Sources */,
 				AE09CAA72548FF9D00D83A9A /* InsertMealByMonthUseCase.swift in Sources */,
-				AE68DCF3252D481A00C68403 /* ViewController.swift in Sources */,
 				AE68DCEF252D481A00C68403 /* AppDelegate.swift in Sources */,
 				AE68DCF1252D481A00C68403 /* SceneDelegate.swift in Sources */,
+				AEACBB532578F45200A11256 /* SplashViewReactor.swift in Sources */,
 				AE09CAB9254905F400D83A9A /* SchoolRepository.swift in Sources */,
 				AEA801952536972800177EA3 /* SchoolInfoResponse.swift in Sources */,
 				AEA8019D25369B3B00177EA3 /* NeisMealsSearchAPI.swift in Sources */,
 				AEA801872536938200177EA3 /* MealInfo.swift in Sources */,
 				AE3BBA3F25367A0D006E92D7 /* BaseRemote.swift in Sources */,
 				AE3BBAA725367A0E006E92D7 /* Date.swift in Sources */,
+				AEACBB3D2578DB6900A11256 /* SettingsTableViewController.swift in Sources */,
 				AE3BBA4625367A0D006E92D7 /* CardView.swift in Sources */,
 				AE09CABD254906DC00D83A9A /* SearchSchoolUseCase.swift in Sources */,
 				AE3BBAAD25367A0E006E92D7 /* UIImageView.swift in Sources */,
 				AEAD558B253B504400D78EC4 /* Meal.swift in Sources */,
 				AE3BBAA525367A0E006E92D7 /* CustomError.swift in Sources */,
+				AEACBB582578F47500A11256 /* MealsViewReactor.swift in Sources */,
 				AE09CAB12549058900D83A9A /* SchoolDataSource.swift in Sources */,
+				AEACBB422578F35C00A11256 /* SplashViewController.swift in Sources */,
+				AEACBB5E2578F4A400A11256 /* SelectSchoolViewReactor.swift in Sources */,
 				AEAD5587253B4FC200D78EC4 /* MealsRemote.swift in Sources */,
 				AE09CA8F2548F09600D83A9A /* MelasType.swift in Sources */,
 				AE3BBA6125367A0E006E92D7 /* NeisSchoolSearchAPI.swift in Sources */,
 				AE2BC0F825771CA700BEDB72 /* School.swift in Sources */,
+				AEACBB482578F3AA00A11256 /* CheckSchoolViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

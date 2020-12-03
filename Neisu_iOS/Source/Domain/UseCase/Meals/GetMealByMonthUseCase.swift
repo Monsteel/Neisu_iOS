@@ -17,24 +17,24 @@ class GetMealByMonthUseCase: ParamUseCase {
     
     func buildUseCaseObservable(param: Param) -> Single<Array<Meal>> {
         return mealsRepository.getMealByMonth(pIndex: param.pIndex,
-                                              agencyCode: param.agencyCode,
-                                              schoolCode: param.schoolCode,
                                               year: param.year,
                                               month: param.month)
     }
     
     class Param {
         let pIndex:Int
-        let agencyCode:String
-        let schoolCode:String
         let year:Int
         let month:Int
         
-        init(year:Int, month:Int, agencyCode: String, schoolCode:String, pIndex:Int = 1){
+        init(year:Int, month:Int, pIndex:Int = 1){
             self.year = year
             self.month = month
-            self.agencyCode = agencyCode
-            self.schoolCode = schoolCode
+            self.pIndex = pIndex
+        }
+        
+        init(date:Date, pIndex:Int = 1){
+            self.year = date.year
+            self.month = date.month
             self.pIndex = pIndex
         }
     }
