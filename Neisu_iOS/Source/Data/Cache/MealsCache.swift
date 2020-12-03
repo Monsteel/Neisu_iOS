@@ -18,7 +18,7 @@ class MealsCache:BaseCache {
         return mealDbManager.deleteAllMeal()
     }
     
-    func getMealByMonth(getMealsRequest:GetMealsRequest) -> Single<Array<Meal>> {
-        return mealDbManager.getMealByMonth(year: getMealsRequest.year, month: getMealsRequest.month)
+    func getMealByMonth(year:Int, month:Int) -> Single<Array<Meal>> {
+        return mealDbManager.getMealByMonth(year: year, month: month)
     }
 }

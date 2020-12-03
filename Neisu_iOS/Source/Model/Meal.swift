@@ -20,7 +20,7 @@ class Meal: Object{
     @objc dynamic var month:Int
     @objc dynamic var year:Int
     
-    required init(date:Date, breakfast:String? = nil, lunch:String? = nil, dinner:String? = nil){
+    required init(date:Date, breakfast:String? = nil, lunch:String? = nil, dinner:String? = nil) {
         self.date = date
         self.year = date.year
         self.month = date.month
@@ -44,23 +44,23 @@ class Meal: Object{
     }
     
     
-    func setBreakfast(breakfast:String){
+    func setBreakfast(breakfast:String) {
         self.breakfast = removeAllergyNumber(data: breakfast).replacingOccurrences(of: "<br/>", with: "\n")
         self.exists = true
     }
     
-    func setLunch(lunch:String){
+    func setLunch(lunch:String) {
         self.lunch = removeAllergyNumber(data: lunch).replacingOccurrences(of: "<br/>", with: "\n")
         self.exists = true
     }
     
-    func setDinner(dinner:String){
+    func setDinner(dinner:String) {
         self.dinner = removeAllergyNumber(data: dinner).replacingOccurrences(of: "<br/>", with: "\n")
         self.exists = true
     }
     
-    private func removeAllergyNumber(data: String?) -> String{
-        if data == nil{
+    private func removeAllergyNumber(data: String?) -> String {
+        if data == nil {
             return ""
         }
         else {

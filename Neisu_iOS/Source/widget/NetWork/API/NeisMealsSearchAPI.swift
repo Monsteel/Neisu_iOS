@@ -8,7 +8,7 @@
 import Moya
 
 enum NeisMealsSearchAPI {
-    case getMeals(getMealsRequest:GetMealsRequest)
+    case getMeals(pIndex:Int, agencyCode:String, schoolCode:String, year:Int, month:Int)
 }
 
 extension NeisMealsSearchAPI: TargetType {
@@ -36,13 +36,14 @@ extension NeisMealsSearchAPI: TargetType {
     //리퀘스트에 사용되는 파라미터 설정
     var task: Task {
         switch self {
-            case let .getMeals(getMealsRequest):
+            case let .getMeals(pIndex, agencyCode, schoolCode, year, month):
                 return .requestParameters(parameters:["KEY":Constants.KEY,
                                                       "type":"json",
                                                       "pSize" : Constants.INFINITE_SCROLL_LIMIT,
-                                                      "ATPT_OFCDC_SC_CODE": getMealsRequest.agencyCode,
-                                                      "SD_SCHUL_CODE": getMealsRequest.schoolCode,
-                                                      "MLSV_YMD": getMealsRequest.getDate().toString(format: "yyyyMM")],
+                                                      "pIndex" : pIndex,
+                                                      "ATPT_OFCDC_SC_CODE": agencyCode,
+                                                      "SD_SCHUL_CODE": schoolCode,
+                                                      "MLSV_YMD": Date.from(year: year, month: month, day: 1)!.toString(format: "yyyyMM")],
                                           encoding: URLEncoding.queryString)
         }
     }

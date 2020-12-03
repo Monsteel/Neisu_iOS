@@ -22,11 +22,9 @@ extension Reactive where Base: MoyaProviderType {
     
     
     func request(_ token: Base.Target, callbackQueue: DispatchQueue? = nil) -> Single<Moya.Response> {
-        
         return Single.create { [weak base] single in
             if(!NetworkReachabilityManager(host:Constants.DEFAULT_HOST)!.isReachable){
-                let newError = NetWorkError.Custom(errorBody: ["message":"서버에 접속할 수 없습니다."])
-                single(.error(newError))
+                single(.error(NeisuError.NetWorkError(status: "409", errorBody: ["message":"서버에 접속할 수 없습니다."])))
             }
             
             let cancellableToken = base?.request(token, callbackQueue: callbackQueue, progress: nil) { result in
@@ -38,9 +36,7 @@ extension Reactive where Base: MoyaProviderType {
                         let errorBody = (try? error.response?.mapJSON() as? Dictionary<String, Any>) ?? Dictionary()
                         let status = error.response?.statusCode ?? 0
                         
-                        let newError = NetWorkError.Custom(status: String(status), errorBody: errorBody)
-                    
-                        single(.error(newError))
+                        single(.error(NeisuError.NetWorkError(status: "\(status)", errorBody: errorBody)))
                 }
             }
             

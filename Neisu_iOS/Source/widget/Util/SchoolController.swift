@@ -21,8 +21,8 @@ class SchoolController {
     }
     
     
-    func getSchoolInfo() -> SchoolInfo{
-        return preferences.value(forKey: "schoolInfo") as? SchoolInfo ?? SchoolInfo()
+    func getSchoolInfo() -> School {
+        return preferences.value(forKey: "schoolInfo") as? School ?? School()
     }
     
     func getIsSetSchool() -> Bool{

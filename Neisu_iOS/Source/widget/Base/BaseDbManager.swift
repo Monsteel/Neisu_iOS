@@ -5,9 +5,7 @@
 //  Created by Dev.Young on 31/07/2020.
 //
 
-import Foundation
 import RealmSwift
-
 
 class BaseDbManager {
     private static var realmInstance : Realm!

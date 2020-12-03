@@ -14,7 +14,19 @@ class SchoolRepositoryImpl:SchoolRepository {
         self.schoolDataSource = schoolDataSource
     }
     
-    func searchSchool(getSchoolRequest: GetSchoolRequest) -> Single<Array<SchoolInfo>> {
-        return schoolDataSource.searchSchool(getSchoolRequest: getSchoolRequest)
-    }   
+    func searchSchool(schoolName:String, pIndex:Int) -> Single<Array<School>> {
+        return schoolDataSource.searchSchool(schoolName:schoolName, pIndex:pIndex)
+    }
+    
+    func insertSchool(school: School) -> Single<Void>{
+        return schoolDataSource.insertSchool(school: school)
+    }
+    
+    func deleteSchool() -> Single<Void>{
+        return schoolDataSource.deleteSchool()
+    }
+    
+    func getSchool() -> Single<School>{
+        return schoolDataSource.getSchool()
+    }
 }

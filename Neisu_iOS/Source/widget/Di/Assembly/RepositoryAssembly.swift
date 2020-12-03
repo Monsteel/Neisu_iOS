@@ -11,7 +11,8 @@ import Swinject
 class RepositoryAssembly: Assembly {
     func assemble(container: Container) {
         container.register(MealsRepository.self) { r in
-            MealsRepositoryImpl(mealsDataSource: r.resolve(MealsDataSource.self)!)
+            MealsRepositoryImpl(mealsDataSource: r.resolve(MealsDataSource.self)!,
+                                schoolDataSource: r.resolve(SchoolDataSource.self)!)
         }.inObjectScope(.container)
         
         container.register(SchoolRepository.self) { r in

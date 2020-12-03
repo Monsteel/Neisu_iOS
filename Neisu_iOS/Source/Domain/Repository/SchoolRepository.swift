@@ -8,5 +8,11 @@
 import RxSwift
 
 protocol SchoolRepository {
-    func searchSchool(getSchoolRequest: GetSchoolRequest) -> Single<Array<SchoolInfo>>
+    func searchSchool(schoolName:String, pIndex:Int) -> Single<Array<School>>
+    
+    func insertSchool(school: School) -> Single<Void>
+    
+    func deleteSchool() -> Single<Void>
+    
+    func getSchool() -> Single<School>
 }

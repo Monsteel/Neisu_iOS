@@ -8,7 +8,7 @@
 import Moya
 
 enum NeisSchoolSearchAPI {
-    case searchSchool(getSchoolRequest:GetSchoolRequest)
+    case searchSchool(schoolName:String, pIndex:Int)
 }
 
 extension NeisSchoolSearchAPI: TargetType {
@@ -36,12 +36,12 @@ extension NeisSchoolSearchAPI: TargetType {
     //리퀘스트에 사용되는 파라미터 설정
     var task: Task {
         switch self {
-            case let .searchSchool(getSchoolRequest):
+            case let .searchSchool(schoolName, pIndex):
                 return .requestParameters(parameters:["KEY":Constants.KEY,
                                                       "type":"json",
-                                                      "pIndex": getSchoolRequest.pIndex,
+                                                      "pIndex": pIndex,
                                                       "pSize" : Constants.INFINITE_SCROLL_LIMIT,
-                                                      "SCHUL_NM": getSchoolRequest.schoolName],
+                                                      "SCHUL_NM": schoolName],
                                           encoding: URLEncoding.queryString)
         }
     }

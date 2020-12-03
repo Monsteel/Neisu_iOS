@@ -15,8 +15,6 @@ class DeleteAllMealUseCase: BaseUseCase {
         self.mealsRepository = mealsRepository
     }
     
-    typealias T = Single<Void>
-    
     func buildUseCaseObservable() -> Single<Void> {
         return mealsRepository.deleteAllMeal()
     }

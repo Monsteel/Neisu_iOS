@@ -8,19 +8,23 @@
 import RxSwift
 
 class SearchSchoolUseCase: ParamUseCase {
-    
-    
     let schoolRepository:SchoolRepository!
     
     init(schoolRepository:SchoolRepository){
         self.schoolRepository = schoolRepository
     }
     
-    typealias Params = GetSchoolRequest
-    typealias T = Single<Array<SchoolInfo>>
+    func buildUseCaseObservable(param: Param) -> Single<Array<School>> {
+        return schoolRepository.searchSchool(schoolName:param.schoolName, pIndex:param.pIndex)
+    }
     
-    
-    func buildUseCaseObservable(params: GetSchoolRequest) -> Single<Array<SchoolInfo>>{
-        return schoolRepository.searchSchool(getSchoolRequest: params)
+    class Param {
+        let pIndex:Int
+        let schoolName:String
+        
+        init(schoolName:String, pIndex:Int){
+            self.schoolName = schoolName
+            self.pIndex = pIndex
+        }
     }
 }

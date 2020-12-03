@@ -15,7 +15,7 @@ class DataSourceAssembly: Assembly {
         }.inObjectScope(.container)
         
         container.register(SchoolDataSource.self) { r in
-            SchoolDataSource(remote: SchoolRemote(), cache: nil)
-        }
+            SchoolDataSource(remote: SchoolRemote(), cache: SchoolCache())
+        }.inObjectScope(.container)
     }
 }

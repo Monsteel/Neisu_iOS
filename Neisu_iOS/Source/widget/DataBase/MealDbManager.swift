@@ -15,7 +15,7 @@ class MealDbManager: BaseDbManager {
     func saveMealData(mealList: Array<Meal>) -> Single<Void> {
         return Single<Void>.create { [weak self] single in
             guard let self = self else {
-                single(.error(DataBaseError.Custom(message: "self is nil")))
+                single(.error(NeisuError.BasicError(message: "self is nil")))
                 return Disposables.create()
             }
             do{
@@ -26,7 +26,7 @@ class MealDbManager: BaseDbManager {
                 single(.success(Void()))
             }
             catch{
-                single(.error(DataBaseError.Custom(message: "Failed to save meals data")))
+                single(.error(NeisuError.DataBaseError(message: "Failed to save meals data")))
             }
             return Disposables.create()
         }
@@ -35,14 +35,14 @@ class MealDbManager: BaseDbManager {
     func getAllMeal() -> Single<Array<Meal>> {
         return Single<Array<Meal>>.create { [weak self] single in
             guard let self = self else {
-                single(.error(DataBaseError.Custom(message: "self is nil")))
+                single(.error(NeisuError.BasicError(message: "self is nil")))
                 return Disposables.create()
             }
             
             let data = self.realm.objects(Meal.self)
             
             if(data.isEmpty){
-                single(.error(DataBaseError.Custom(message: "Failed to get meals data")))
+                single(.error(NeisuError.BasicError(message: "Failed to get meals data")))
             }else{
                 single(.success(Array(data)))
             }
@@ -54,7 +54,7 @@ class MealDbManager: BaseDbManager {
     func getMealByMonth(year: Int, month: Int) -> Single<Array<Meal>> {
         return Single<Array<Meal>>.create { [weak self] single in
             guard let self = self else {
-                single(.error(DataBaseError.Custom(message: "self is nil")))
+                single(.error(NeisuError.BasicError(message: "self is nil")))
                 return Disposables.create()
             }
             
@@ -65,7 +65,7 @@ class MealDbManager: BaseDbManager {
                                                .filter(monthPredicate)
             
             if(data.isEmpty){
-                single(.error(DataBaseError.Custom(message: "Failed to get meals data")))
+                single(.error(NeisuError.DataBaseError(message: "Failed to get meals data")))
             }else{
                 single(.success(Array(data)))
             }
@@ -74,12 +74,13 @@ class MealDbManager: BaseDbManager {
         }
     }
     
-    func deleteAllMeal() -> Single<Void>{
+    func deleteAllMeal() -> Single<Void> {
         return Single<Void>.create { [weak self] single in
             guard let self = self else {
-                single(.error(DataBaseError.Custom(message: "self is nil")))
+                single(.error(NeisuError.BasicError(message: "self is nil")))
                 return Disposables.create()
             }
+            
             do{
                 try self.realm.write {
                     self.realm.delete(self.realm.objects(Meal.self))
@@ -87,8 +88,9 @@ class MealDbManager: BaseDbManager {
                 single(.success(Void()))
             }
             catch{
-                single(.error(DataBaseError.Custom(message: "Failed to save meals data")))
+                single(.error(NeisuError.DataBaseError(message: "Failed to delete meals data")))
             }
+            
             return Disposables.create()
         }
     }

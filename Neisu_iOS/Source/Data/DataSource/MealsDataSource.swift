@@ -9,20 +9,16 @@ import Foundation
 import RxSwift
 
 class MealsDataSource: BaseDataSource<MealsRemote, MealsCache> {
-    func getMealByMonth(getMealsRequest: GetMealsRequest) -> Single<Array<Meal>>{
-        return cache.getMealByMonth(getMealsRequest: getMealsRequest).catchError { [weak self] _ -> PrimitiveSequence<SingleTrait, Array<Meal>> in
-            guard let self = self else {
-                return .error(CustomError.Custom(errorMessage: "self is nil"))
-            }
-            return self.getMealByMonthRemote(getMealsRequest: getMealsRequest)
+    func getMealByMonth(pIndex:Int, agencyCode:String, schoolCode:String, year:Int, month:Int) -> Single<Array<Meal>>{
+        return cache.getMealByMonth(year: year, month: month).catchError { [weak self] _ -> PrimitiveSequence<SingleTrait, Array<Meal>> in
+            guard let self = self else { throw NeisuError.BasicError(message: "self is nil") }
+            return self.getMealByMonthRemote(pIndex: pIndex, agencyCode: agencyCode, schoolCode: schoolCode, year: year, month: month)
         }
     }
 
-    func insertMealByMonth(getMealsRequest: GetMealsRequest) -> Single<Void> {
-        return remote.getMealByMonth(getMealsRequest: getMealsRequest).flatMap { [weak self] response -> Single<Void> in
-            guard let self = self else {
-                return .error(CustomError.Custom(errorMessage: "self is nil"))
-            }
+    func insertMealByMonth(pIndex:Int, agencyCode:String, schoolCode:String, year:Int, month:Int) -> Single<Void> {
+        return remote.getMealByMonth(pIndex: pIndex, agencyCode: agencyCode, schoolCode: schoolCode, year: year, month: month).flatMap { [weak self] response -> Single<Void> in
+            guard let self = self else { throw NeisuError.BasicError(message: "self is nil") }
             return self.cache.insertMealList(meals: response)
         }
     }
@@ -31,15 +27,10 @@ class MealsDataSource: BaseDataSource<MealsRemote, MealsCache> {
         return cache.deleteAllMeal()
     }
 
-    private func getMealByMonthRemote(getMealsRequest: GetMealsRequest) -> Single<Array<Meal>>{
-        return remote.getMealByMonth(getMealsRequest: getMealsRequest).flatMap { [weak self] response -> Single<Array<Meal>> in
-            guard let self = self else {
-                return .error(CustomError.Custom(errorMessage: "self is nil"))
-            }
-            return self.cache.insertMealList(meals: response).map { _ -> Array<Meal> in
-                return response
-            }
+    private func getMealByMonthRemote(pIndex:Int, agencyCode:String, schoolCode:String, year:Int, month:Int) -> Single<Array<Meal>>{
+        return remote.getMealByMonth(pIndex: pIndex, agencyCode: agencyCode, schoolCode: schoolCode, year: year, month: month).flatMap { [weak self] response -> Single<Array<Meal>> in
+            guard let self = self else { throw NeisuError.BasicError(message: "self is nil") }
+            return self.cache.insertMealList(meals: response).map { response }
         }
     }
 }
-

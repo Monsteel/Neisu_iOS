@@ -21,10 +21,22 @@ class UseCaseAssembly: Assembly {
         container.register(DeleteAllMealUseCase.self) { r in
             DeleteAllMealUseCase(mealsRepository: r.resolve(MealsRepository.self)!)
         }.inObjectScope(.container)
-        
-        
+                
         container.register(SearchSchoolUseCase.self) { r in
             SearchSchoolUseCase(schoolRepository: r.resolve(SchoolRepository.self)!)
+        }.inObjectScope(.container)
+        
+        
+        container.register(InsertSchoolUseCase.self) { r in
+            InsertSchoolUseCase(schoolRepository: r.resolve(SchoolRepository.self)!)
+        }.inObjectScope(.container)
+        
+        container.register(DeleteSchoolUseCase.self) { r in
+            DeleteSchoolUseCase(schoolRepository: r.resolve(SchoolRepository.self)!)
+        }.inObjectScope(.container)
+        
+        container.register(GetSchoolUseCase.self) { r in
+            GetSchoolUseCase(schoolRepository: r.resolve(SchoolRepository.self)!)
         }.inObjectScope(.container)
     }
 }

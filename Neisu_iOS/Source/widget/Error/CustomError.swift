@@ -5,7 +5,8 @@
 //  Created by Dev.Young on 08/08/2020.
 //
 
-enum CustomError: Error {
-    case CustomError
-    case Custom(errorMessage: String)
+enum NeisuError: Error {
+    case NetWorkError(status:String, errorBody: Dictionary<String, Any> = Dictionary())
+    case DataBaseError(message:String,  errorBody: Dictionary<String, Any> = Dictionary())
+    case BasicError(message:String)
 }

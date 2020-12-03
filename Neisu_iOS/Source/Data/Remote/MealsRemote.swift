@@ -9,17 +9,17 @@ import Foundation
 import RxSwift
 
 class MealsRemote: BaseRemote<NeisMealsSearchAPI> {
-    func getMealByMonth(getMealsRequest: GetMealsRequest) -> Single<Array<Meal>> {
+    func getMealByMonth(pIndex:Int, agencyCode:String, schoolCode:String, year:Int, month:Int) -> Single<Array<Meal>> {
         decoder.dateDecodingStrategy = .formatted(Formatter.neisStyleDate)
-        return provider.rx.request(.getMeals(getMealsRequest: getMealsRequest)).map(MealServiceDietInfoResponse.self, using: decoder)
+        return provider.rx.request(.getMeals(pIndex:pIndex, agencyCode:agencyCode, schoolCode:schoolCode, year:year, month:month)).map(MealServiceDietInfoResponse.self, using: decoder)
             .map { [weak self] response in
                 let statusHeader = response.head.headSecond.result
                 
-                if(statusHeader?.code != "INFO-000"){
-                    throw NetWorkError.Custom(status: statusHeader?.code ?? "", errorBody: ["message":statusHeader?.message ?? ""])
-                }else{
-                    return self?.convertMeals(year: getMealsRequest.year, month: getMealsRequest.month, mealsInfoArray: response.row) ?? Array<Meal>()
+                if(statusHeader?.code != "INO-000"){
+                    throw NeisuError.NetWorkError(status: statusHeader?.code ?? "", errorBody: ["message":statusHeader?.message ?? ""])
                 }
+                
+                return self?.convertMeals(year: year, month: month, mealsInfoArray: response.row) ?? Array<Meal>()
             }
     }
     

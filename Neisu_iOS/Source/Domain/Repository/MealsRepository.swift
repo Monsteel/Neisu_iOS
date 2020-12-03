@@ -8,9 +8,9 @@
 import RxSwift
 
 protocol MealsRepository {
-    func getMealByMonth(getMealsRequest: GetMealsRequest) -> Single<Array<Meal>>
-
-    func insertMealByMonth(getMealsRequest: GetMealsRequest) -> Single<Void>
-
+    func getMealByMonth(pIndex:Int, agencyCode:String, schoolCode:String, year:Int, month:Int) -> Single<Array<Meal>>
+    
+    func insertMealByMonth(pIndex:Int, agencyCode:String, schoolCode:String, year:Int, month:Int) -> Single<Void>
+    
     func deleteAllMeal() -> Single<Void>
 }

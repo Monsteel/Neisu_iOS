@@ -23,7 +23,7 @@ class ViewController: UIViewController {
     }
     
     private func requeset(){
-        getMealByMonthUseCase.buildUseCaseObservable(params: GetMealsRequest(year: 2020, month: 10))
+        getMealByMonthUseCase.buildUseCaseObservable(param: GetMealByMonthUseCase.Param(year: 2020, month: 11, agencyCode: "C10", schoolCode: "1234", pIndex: 1))
             .subscribe { response in
                 print("LOGLOG")
                 dump(response)
@@ -33,7 +33,7 @@ class ViewController: UIViewController {
     }
     
     private func request2(){
-        searchSchoolUseCase.buildUseCaseObservable(params: GetSchoolRequest(schoolName: "소프트웨어",pIndex: 1))
+        searchSchoolUseCase.buildUseCaseObservable(param: SearchSchoolUseCase.Param(schoolName: "1234", pIndex: 1))
             .subscribe { response in
                 print("LOGLOG")
                 dump(response)

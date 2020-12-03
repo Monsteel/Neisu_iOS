@@ -15,11 +15,27 @@ class InsertMealByMonthUseCase: ParamUseCase {
         self.mealsRepository = mealsRepository
     }
     
-    typealias Params = GetMealsRequest
+    func buildUseCaseObservable(param: Param) -> Single<Void> {
+        return mealsRepository.insertMealByMonth(pIndex: param.pIndex,
+                                                 agencyCode: param.agencyCode,
+                                                 schoolCode: param.schoolCode,
+                                                 year: param.year,
+                                                 month: param.month)
+    }
     
-    typealias T = Single<Void>
-    
-    func buildUseCaseObservable(params: GetMealsRequest) -> Single<Void> {
-        return mealsRepository.insertMealByMonth(getMealsRequest: params)
+    class Param {
+        let pIndex:Int
+        let agencyCode:String
+        let schoolCode:String
+        let year:Int
+        let month:Int
+        
+        init(year:Int, month:Int, agencyCode: String, schoolCode:String, pIndex:Int = 1){
+            self.year = year
+            self.month = month
+            self.agencyCode = agencyCode
+            self.schoolCode = schoolCode
+            self.pIndex = pIndex
+        }
     }
 }
