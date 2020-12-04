@@ -13,6 +13,7 @@ class SchoolInfoResponse: Decodable {
     
     enum HeaderKeys : String, CodingKey{
         case schoolInfo
+        case result
     }
     
     required convenience init(from decoder: Decoder) throws {

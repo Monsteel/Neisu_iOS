@@ -39,13 +39,6 @@ extension UIViewController {
         }
     }
     
-    public func moveToMain(){
-        DispatchQueue.main.async(){
-            self.performSegue(withIdentifier: "moveToMainViewSegue", sender: nil)
-        }
-        self.dismiss(animated: true)
-    }
-    
     public func stopIndicatingActivity() {
         DispatchQueue.main.async {
             self.indicator.stopAnimating()

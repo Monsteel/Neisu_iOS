@@ -15,8 +15,7 @@ class SplashViewReactor: Reactor {
     
     init(getSchoolUseCase:GetSchoolUseCase) {
         initialState = State(isLoading: false,
-                             isRegister: false,
-                             error: nil)
+                             isRegister: nil)
         
         self.getSchoolUseCase = getSchoolUseCase
     }
@@ -28,13 +27,11 @@ class SplashViewReactor: Reactor {
     enum Mutation {
         case setLoadingState(Bool)
         case setRegisterState(Bool)
-        case setError(Error)
     }
     
     struct State {
         var isLoading:Bool
-        var isRegister:Bool
-        var error:Error?
+        var isRegister:Bool?
     }
     
     func mutate(action: Action) -> Observable<Mutation> {
@@ -45,8 +42,8 @@ class SplashViewReactor: Reactor {
                     getSchoolUseCase.buildUseCaseObservable()
                         .asObservable()
                         .map { _ in true }
-                        .map { Mutation.setRegisterState($0) }
-                        .catchError { Observable.just(Mutation.setError($0)) },
+                        .catchErrorJustReturn(false)
+                        .map { Mutation.setRegisterState($0) },
                     Observable.just(Mutation.setLoadingState(false))
                 ])
         }
@@ -60,9 +57,6 @@ class SplashViewReactor: Reactor {
                 state.isLoading = isLoading
             case .setRegisterState(let isRegister):
                 state.isRegister = isRegister
-            case .setError(let error):
-                state.isRegister = false
-                state.error = error
         }
         
         return state

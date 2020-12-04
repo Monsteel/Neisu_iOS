@@ -18,7 +18,7 @@ class SchoolRemote: BaseRemote<NeisSchoolSearchAPI> {
                 }
                 
                 return $0.row.map { School(schoolName: $0.SCHUL_NM,
-                                           schoolNameEnglish: $0.ENG_SCHUL_NM,
+                                           schoolNameEnglish: $0.ENG_SCHUL_NM ?? $0.SCHUL_NM,
                                            schoolAdress: $0.ORG_RDNMA,
                                            schoolCode: $0.SD_SCHUL_CODE,
                                            agencyCode: $0.ATPT_OFCDC_SC_CODE) }

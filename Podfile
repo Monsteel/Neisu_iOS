@@ -13,7 +13,6 @@ target 'Neisu_iOS' do
   pod 'RxCocoa'
   pod 'CryptoSwift'
   pod 'AlamofireNetworkActivityLogger', '~> 3.0'
-  pod 'ActionSheetPicker-3.0'
   pod 'ReactorKit'
   pod 'Swinject'
   pod 'Toast-Swift', '~> 5.0.1'

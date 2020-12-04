@@ -20,6 +20,7 @@
 		AE09CAB4254905DA00D83A9A /* SchoolRepositoryImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE09CAB3254905DA00D83A9A /* SchoolRepositoryImpl.swift */; };
 		AE09CAB9254905F400D83A9A /* SchoolRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE09CAB8254905F400D83A9A /* SchoolRepository.swift */; };
 		AE09CABD254906DC00D83A9A /* SearchSchoolUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE09CABC254906DC00D83A9A /* SearchSchoolUseCase.swift */; };
+		AE117B4B2579BFEA005F0F2E /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE117B4A2579BFEA005F0F2E /* SearchResultCell.swift */; };
 		AE2BC0F825771CA700BEDB72 /* School.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2BC0F725771CA700BEDB72 /* School.swift */; };
 		AE2BC0FB257720F700BEDB72 /* SchoolDbManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2BC0FA257720F700BEDB72 /* SchoolDbManager.swift */; };
 		AE2BC0FE257721B200BEDB72 /* SchoolCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE2BC0FD257721B200BEDB72 /* SchoolCache.swift */; };
@@ -99,6 +100,7 @@
 		AE09CAB3254905DA00D83A9A /* SchoolRepositoryImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolRepositoryImpl.swift; sourceTree = "<group>"; };
 		AE09CAB8254905F400D83A9A /* SchoolRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolRepository.swift; sourceTree = "<group>"; };
 		AE09CABC254906DC00D83A9A /* SearchSchoolUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSchoolUseCase.swift; sourceTree = "<group>"; };
+		AE117B4A2579BFEA005F0F2E /* SearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
 		AE2BC0F725771CA700BEDB72 /* School.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = School.swift; sourceTree = "<group>"; };
 		AE2BC0FA257720F700BEDB72 /* SchoolDbManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolDbManager.swift; sourceTree = "<group>"; };
 		AE2BC0FD257721B200BEDB72 /* SchoolCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolCache.swift; sourceTree = "<group>"; };
@@ -241,6 +243,14 @@
 				AE2BC11925772A1F00BEDB72 /* GetSchoolUseCase.swift */,
 			);
 			path = School;
+			sourceTree = "<group>";
+		};
+		AE117B492579BFDD005F0F2E /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				AE117B4A2579BFEA005F0F2E /* SearchResultCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		AE3BB9AA25367A0D006E92D7 /* Base */ = {
@@ -441,6 +451,7 @@
 		AEACBB4A2578F3B700A11256 /* Register */ = {
 			isa = PBXGroup;
 			children = (
+				AE117B492579BFDD005F0F2E /* Cell */,
 				AEACBB442578F39F00A11256 /* SelectSchoolViewController.swift */,
 				AEACBB472578F3AA00A11256 /* CheckSchoolViewController.swift */,
 			);
@@ -726,6 +737,7 @@
 				AE3BBA3E25367A0D006E92D7 /* BaseUseCase.swift in Sources */,
 				AEACBB4E2578F3F500A11256 /* MealsViewController.swift in Sources */,
 				AE2BC11725772A1800BEDB72 /* DeleteSchoolUseCase.swift in Sources */,
+				AE117B4B2579BFEA005F0F2E /* SearchResultCell.swift in Sources */,
 				AEACBB612578F4B200A11256 /* CheckSchoolViewReactor.swift in Sources */,
 				AE3BBA9B25367A0E006E92D7 /* Constants.swift in Sources */,
 				AE2BC11425772A0D00BEDB72 /* InsertSchoolUseCase.swift in Sources */,

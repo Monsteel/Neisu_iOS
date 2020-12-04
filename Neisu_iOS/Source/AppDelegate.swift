@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Toast_Swift
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {

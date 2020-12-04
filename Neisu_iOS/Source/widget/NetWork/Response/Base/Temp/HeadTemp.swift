@@ -12,6 +12,13 @@ class HeadTemp: Decodable {
     var result:Result?
     
     
+    init(){}
+    
+    init(listTotalCount:Int?, result:Result?){
+        self.listTotalCount = listTotalCount
+        self.result = result
+    }
+    
     enum TempKeys : String, CodingKey{
         case listTotalCount = "list_total_count"
         case result = "RESULT"
