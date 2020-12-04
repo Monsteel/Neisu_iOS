@@ -42,6 +42,10 @@ extension Date {
     func before(_ date: Date) -> Bool {
         return self < date
     }
+    
+    func after(_ date: Date) -> Bool {
+        return self > date
+    }
 
     func parse(_ string: String, format: String = "yyyy-MM-dd") -> Date {
         let dateFormatter = DateFormatter()
@@ -104,6 +108,10 @@ extension Date {
         dateFormatter.dateFormat = "ss"
         let day = Int(dateFormatter.string(from: self)) ?? 0
         return day
+    }
+    
+    func equalsDate(date:Date) -> Bool{
+        return (self.toString(format: "yyyyMMdd") == date.toString(format: "yyyyMMdd"))
     }
     
     func toString(format: String = "yyyy-MM-dd") -> String{

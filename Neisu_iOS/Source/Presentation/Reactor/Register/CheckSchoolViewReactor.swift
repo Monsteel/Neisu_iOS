@@ -54,6 +54,8 @@ class CheckSchoolViewReactor: Reactor {
     
     func reduce(state: State, mutation: Mutation) -> State {
         var state = state
+        state.error = nil
+        
         switch mutation {
             case .setLoadingState(let isLoading):
                 state.isLoading = isLoading

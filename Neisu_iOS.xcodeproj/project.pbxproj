@@ -593,8 +593,8 @@
 			isa = PBXGroup;
 			children = (
 				AEACBB412578F35C00A11256 /* SplashViewController.swift */,
-				AEACBB4B2578F3C200A11256 /* Main */,
 				AEACBB4A2578F3B700A11256 /* Register */,
+				AEACBB4B2578F3C200A11256 /* Main */,
 				AE68DCF4252D481A00C68403 /* Main.storyboard */,
 			);
 			path = View;
@@ -604,8 +604,8 @@
 			isa = PBXGroup;
 			children = (
 				AEACBB522578F45200A11256 /* SplashViewReactor.swift */,
-				AEACBB502578F43E00A11256 /* Main */,
 				AEACBB512578F44200A11256 /* Register */,
+				AEACBB502578F43E00A11256 /* Main */,
 			);
 			path = Reactor;
 			sourceTree = "<group>";

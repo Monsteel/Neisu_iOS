@@ -1,5 +1,4 @@
 PODS:
-  - ActionSheetPicker-3.0 (2.6.0)
   - Alamofire (5.0.5)
   - AlamofireNetworkActivityLogger (3.0.0):
     - Alamofire (~> 5.0.0-rc.2)
@@ -65,7 +64,6 @@ PODS:
   - WeakMapTable (1.1.0)
 
 DEPENDENCIES:
-  - ActionSheetPicker-3.0
   - Alamofire (~> 5.0.0-rc.2)
   - AlamofireNetworkActivityLogger (~> 3.0)
   - CryptoSwift
@@ -80,7 +78,6 @@ DEPENDENCIES:
 
 SPEC REPOS:
   trunk:
-    - ActionSheetPicker-3.0
     - Alamofire
     - AlamofireNetworkActivityLogger
     - CryptoSwift
@@ -98,7 +95,6 @@ SPEC REPOS:
     - WeakMapTable
 
 SPEC CHECKSUMS:
-  ActionSheetPicker-3.0: f47ea288343f6fb86285f1cca1f849bd2a40a54e
   Alamofire: df2f8f826963b08b9a870791ad48e07a10090b2e
   AlamofireNetworkActivityLogger: 94e8a7d454a4a9800cef1d0c1d3699754493684b
   CryptoSwift: 093499be1a94b0cae36e6c26b70870668cb56060
@@ -115,6 +111,6 @@ SPEC CHECKSUMS:
   Toast-Swift: 9b6a70f28b3bf0b96c40d46c0c4b9d6639846711
   WeakMapTable: d0327eda092be6a8f7c532942ae98dc7948f5d32
 
-PODFILE CHECKSUM: 241382acac092d4d28a21f1e9232562413e5dec6
+PODFILE CHECKSUM: ddc2c83abba52a169c23c36ab886676e3aa7f8ec
 
 COCOAPODS: 1.9.3

@@ -65,10 +65,10 @@ extension SelectSchoolViewController: StoryboardView {
                             errorMsg = message
                         case .DataBaseError(let message, _):
                             errorMsg = message
-                        case .NetWorkError(let message, _):
-                            errorMsg = message
+                        case .NetWorkError(_, let leterrorBody):
+                            errorMsg = leterrorBody["message"] as! String
                     }
-                    self.view.makeToast(errorMsg, duration: 2.0, position: .top)
+                    self.view.superview?.makeToast(errorMsg, duration: 2.0, position: .top)
                 }else if let error = error.element as? NSError {
                     if(error.domain == "Moya.MoyaError") { return }
                     self.warningAlert(title: error.localizedDescription,

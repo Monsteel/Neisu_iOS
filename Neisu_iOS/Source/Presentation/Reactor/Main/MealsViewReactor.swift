@@ -12,37 +12,55 @@ class MealsViewReactor: Reactor {
     let initialState: State
     
     let getMealByMonthUseCase:GetMealByMonthUseCase
+    let getSchoolUseCase:GetSchoolUseCase
     
-    init(getMealByMonthUseCase:GetMealByMonthUseCase) {
+    init(getMealByMonthUseCase:GetMealByMonthUseCase,
+         getSchoolUseCase:GetSchoolUseCase) {
         self.initialState = State(isLoading: false,
                                   error: nil,
                                   mealsByMonth: [])
         
         self.getMealByMonthUseCase = getMealByMonthUseCase
+        self.getSchoolUseCase = getSchoolUseCase
     }
     
     enum Action {
-        case initialize
+        case initialize(Date)
+        case selectDate(Date)
     }
     
     enum Mutation {
         case setLoadingState(Bool)
         case setError(Error)
         case setMealsByMonth([Meal])
+        case setSchool(School?)
     }
     
     struct State {
         var isLoading:Bool
         var error:Error?
         var mealsByMonth:[Meal]
+        var school:School?
     }
     
     func mutate(action: Action) -> Observable<Mutation> {
         switch action {
-            case .initialize:
+            case .initialize(let date):
                 return Observable.concat([
                     Observable.just(Mutation.setLoadingState(true)),
-                    getMealByMonthUseCase.buildUseCaseObservable(param: GetMealByMonthUseCase.Param(date: Date()))
+                    getSchoolUseCase.buildUseCaseObservable().asObservable()
+                        .map{ Mutation.setSchool($0) }
+                        .catchError { Observable.just(Mutation.setError($0)) },
+                    getMealByMonthUseCase.buildUseCaseObservable(param: GetMealByMonthUseCase.Param(date: date))
+                        .asObservable()
+                        .map { Mutation.setMealsByMonth($0) }
+                        .catchError { Observable.just(Mutation.setError($0)) },
+                    Observable.just(Mutation.setLoadingState(false))
+                ])
+            case .selectDate(let date):
+                return Observable.concat([
+                    Observable.just(Mutation.setLoadingState(true)),
+                    getMealByMonthUseCase.buildUseCaseObservable(param: GetMealByMonthUseCase.Param(date: date))
                         .asObservable()
                         .map { Mutation.setMealsByMonth($0) }
                         .catchError { Observable.just(Mutation.setError($0)) },
@@ -53,6 +71,8 @@ class MealsViewReactor: Reactor {
     
     func reduce(state: State, mutation: Mutation) -> State {
         var state = state
+        state.error = nil
+        state.mealsByMonth.removeAll()
         
         switch mutation {
             case .setLoadingState(let isLoading):
@@ -61,8 +81,9 @@ class MealsViewReactor: Reactor {
                 state.error = error
             case .setMealsByMonth(let mealsByMonth):
                 state.mealsByMonth = mealsByMonth
+            case .setSchool(let school):
+                state.school = school
         }
-        
         return state
     }
 }

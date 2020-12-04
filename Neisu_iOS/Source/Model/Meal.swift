@@ -59,6 +59,13 @@ class Meal: Object{
         self.exists = true
     }
     
+    func getDate() -> Date {
+        guard let date = date else {
+            return Date.from(year: year, month: month, day: day)!
+        }
+        return date
+    }
+    
     private func removeAllergyNumber(data: String?) -> String {
         if data == nil {
             return ""

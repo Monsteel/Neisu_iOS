@@ -20,7 +20,9 @@ class MealDbManager: BaseDbManager {
             }
             do{
                 try self.realm.write {
-                    self.realm.delete(self.realm.objects(Meal.self))
+                    let objectsToDelete = self.realm.objects(Meal.self).filter("year == %d", mealList.first?.year ?? 0)
+                                                                       .filter("month == %d", mealList.first?.month ?? 0)
+                    self.realm.delete(objectsToDelete)
                     self.realm.add(mealList)
                 }
                 single(.success(Void()))

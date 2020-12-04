@@ -15,7 +15,7 @@ class MealsRemote: BaseRemote<NeisMealsSearchAPI> {
             .map { [weak self] response in
                 let statusHeader = response.head.headSecond.result
                 
-                if(statusHeader?.code != "INO-000"){
+                if(statusHeader?.code != "INFO-000"){
                     throw NeisuError.NetWorkError(status: statusHeader?.code ?? "", errorBody: ["message":statusHeader?.message ?? ""])
                 }
                 

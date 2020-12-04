@@ -15,13 +15,15 @@ class ReactorAssembly: Assembly {
         }
         
         container.register(MealsViewReactor.self) { r in
-            MealsViewReactor(getMealByMonthUseCase: r.resolve(GetMealByMonthUseCase.self)!)
+            MealsViewReactor(getMealByMonthUseCase: r.resolve(GetMealByMonthUseCase.self)!,
+                             getSchoolUseCase: r.resolve(GetSchoolUseCase.self)!)
         }
         
         container.register(SettingsTableViewReactor.self) { r in
             SettingsTableViewReactor(deleteSchoolUseCase: r.resolve(DeleteSchoolUseCase.self)!,
                                      deleteAllMealUseCase: r.resolve(DeleteAllMealUseCase.self)!,
-                                     insertMealByMonthUseCase: r.resolve(InsertMealByMonthUseCase.self)!)
+                                     insertMealByMonthUseCase: r.resolve(InsertMealByMonthUseCase.self)!,
+                                     getSchoolUseCase: r.resolve(GetSchoolUseCase.self)!)
         }
         
         container.register(SelectSchoolViewReactor.self) { r in
